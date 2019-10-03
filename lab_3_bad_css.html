@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>lab_3_bad_css</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .wrapper {
+      width: 60%;
+      margin: 0 auto;
+      background: grey;
+      height: 100vh;
+    }
+
+    .head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .head a,
+    .head {
+      margin: 3px;
+      padding: 0;
+    }
+
+    .second_container {
+      background-color: pink;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .textbox {
+      height: 100px;
+      width: 350px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .first {
+      background: red;
+      cursor: pointer;
+    }
+
+    .second {
+      background: lightblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="head">
+      <h1>Sample Header</h1>
+      <a href="#">anchor tag to nowhere</a>
+    </div>
+
+    <div class="second_container">
+      hello
+    </div>
+
+    <div class="container">
+      <!-- First button -->
+      <div class="first textbox">
+      </div>
+      <!-- Second button -->
+      <div class="first textbox">
+      </div>
+
+      <div class="second textbox">
+        <p>
+          World #2
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+  <script>
+
+    let element = document.getElementsByClassName("first")[0];
+    let element2 = document.getElementsByClassName("first")[1]
+    const phrase = "click me I'm great";
+    element.innerHTML = phrase;
+
+    element.addEventListener('click', (e) => {
+      if (element.innerHTML !== phrase) {
+        element.innerHTML = phrase;
+      } else {
+        element.innerHTML = 'You are Great! Click again';
+      }
+    });
+
+  </script>
+</body>
+
+</html>
